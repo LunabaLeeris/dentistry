@@ -1,0 +1,55 @@
+<h1 class="display-4 mt-3"><strong>Patient Chart</strong></h1>
+<p3 class="display-7">Last Version Saved: {{LAST-DATE}} </p3>
+<div class="col align-items-center mt-5">
+    <!-- SEARCH BAR -->
+    <div class="row d-flex justify-content-between no-gutters align-items-center">
+        <div class="col">
+            <form class="d-flex align-items-center">
+                <input class="form-control me-3" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn ms-0 rounded-0 border" type="submit">
+                    <img src="\assets/icons/search.svg" alt="">
+                </button>
+            </form>
+        </div>
+        <!-- FILTER -->
+        <div class="col-auto me-2 dropdown">
+            <button class="btn btn-secondary dropdown-toggle mt-0" type="button" id="filter-lab-logs" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="\assets/icons/filter.svg">
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><a class="dropdown-item" href="#" onclick="handleSelection('Option 1')">Option 1</a></li>
+                <li><a class="dropdown-item" href="#" onclick="handleSelection('Option 2')">Option 2</a></li>
+                <li><a class="dropdown-item" href="#" onclick="handleSelection('Option 3')">Option 3</a></li>
+            </ul>
+        </div>
+        <!-- ADD NEW -->
+        <div class="col-auto">
+            <button id="add-new-patient" type="button" class="btn btn-success rounded-0">
+                Add new patient
+            </button>
+        </div>
+    </div>
+</div>
+<!-- TABLE DATA -->
+<div class="col table-responsive mt-1">
+    <table class="table table-md w-100 table-bordered mt-3">
+        <thead>
+            <tr class="table-primary">
+            <th scope="col">#</th>
+            <th scope="col">Patient ID</th>
+            <th scop e="col">Patient Name</th>
+            <th scope="col">Admission Date</th>
+            <th scope="col">Most Recent Procedure</th>
+            <th scope="col">Instructor Name</th>
+            <th scope="col">Last Updated</th>
+            <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                {{TABLE-DATA}}
+            </tr>
+        </tbody>
+    </table>
+</div>
+ {{EMPTY-TAG}}

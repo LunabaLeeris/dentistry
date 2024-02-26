@@ -1,0 +1,46 @@
+<h1 class="display-4 mt-3"><strong>Patients</strong></h1>
+<div class="col-md-11 align-items-center mt-5 ">
+    <!-- SEARCH BAR -->
+    <div class="row d-flex justify-content-left no-gutters align-items-center">
+        <div class="col">
+            <form class="d-flex align-items-center">
+                <input class="form-control me-3" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn ms-0 rounded-0 border" type="submit">
+                    <img src="\assets/icons/search.svg" alt="">
+                </button>
+            </form>
+        </div>
+        <!-- FILTER -->
+        <div class="col-auto me-2 dropdown">
+            <button class="btn btn-secondary dropdown-toggle mt-0" type="button" id="filter-lab-logs" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="\assets/icons/filter.svg">
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><a class="dropdown-item" href="#" onclick="handleSelection('Option 1')">Option 1</a></li>
+                <li><a class="dropdown-item" href="#" onclick="handleSelection('Option 2')">Option 2</a></li>
+                <li><a class="dropdown-item" href="#" onclick="handleSelection('Option 3')">Option 3</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- TABLE DATA -->
+    <div class="col mt-1 table-responsive">
+        <table class="table w-100 table-md table-bordered mt-3">
+            <thead>
+                <tr class="table-primary">
+                <th scope="col">#</th>
+                <th scope="col">Patient's Name</th>
+                <th scope="col">Patient ID</th>
+                <th scope="col">Admission Date</th>
+                <th scope="col">Most Recent Procedure</th>
+                <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    {{TABLE-DATA}}
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    {{EMPTY-TAG}}
+</div>

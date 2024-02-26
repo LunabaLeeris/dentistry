@@ -1,0 +1,102 @@
+ <div class="row align-items-center">
+    <div class="col-auto ">
+        <button class="btn ms-0 rounded-0 border" id="back-to-proced-logs" type="submit">
+            <img src="\assets/icons/back.svg" alt="">
+        </button>
+    </div>
+    <div class="col">
+        <p3 class="display-6">Procedure Logs > Add New Procedure Log</h1>
+    </div>
+</div>
+<form id="myForm">
+    <div class="row flex-row d-flex mt-3 g-3">
+        <div class="col-md-4">
+                <label for="procedure-date" class="form-label">Procedure Date <span class="text-danger">*</span></label>
+                <input type="date" class="form-control" id="procedure-date" name="date">
+        </div>
+        <div class="col-md-4">
+            <label for="room-number" class="form-label">Room Number <span class="text-danger">*</span></label>
+            <input type="number" class="form-control rounded-0" id="room-number" placeholder="Enter room number" required>
+        </div>
+        <div class="col-md-4">
+            <label for="chair-number" class="form-label">Chair Number <span class="text-danger">*</span></label>
+            <input type="number" class="form-control rounded-0" id="chair-number" placeholder="Enter chair number" required>
+        </div>
+        <div class="col-md-4">
+            <label for="time-start" class="form-label">Time Start <span class="text-danger">*</span></label>
+            <input type="time" class="form-control rounded-0" id="time-start" placeholder="Enter procedure time start" required>
+        </div>
+        <div class="col-md-4">
+            <label for="time-completion" class="form-label">Time Completion <span class="text-danger">*</span></label>
+            <input type="time" class="form-control rounded-0" id="time-completion" placeholder="Enter procedure ended" required>
+        </div>
+            <div class="col-md-5">
+            <label for="instructor-name" class="form-label">Instructor Name <span class="text-danger">*</span></label>
+            <select type="select" class="form-select rounded-0" id="instructor-name" required>
+                <option selected disabled>Select instructor</option>
+                <!-- Pre generated Instructors -->
+            </select>
+        </div>
+            <div class="col-md-5">
+            <label for="patient-name" class="form-label">Patient Name <span class="text-danger">*</span></label>
+            <select type="select" class="form-select rounded-0" id="patient-name" required>
+                    <option selected disabled>Select patient</option>
+                <!-- Pre generated Patients -->
+            </select>
+        </div>
+        <div class="col-md-5">
+            <label for="procedure-section" class="form-label">Procedure Section <span class="text-danger">*</span></label>
+            <select type="select" class="form-select rounded-0" id="procedure-section" placeholder="Enter date" required>
+                <!-- Procedure sections -->
+                    <option selected disabled>Select procedure section</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+            </select>
+        </div>
+        <div class="col-md-5">
+            <label for="procedure-type" class="form-label">Procedure Type <span class="text-danger">*</span></label>
+            <select type="select" class="form-select rounded-0" id="procedure-type" placeholder="Enter date" required>
+                    <option selected disabled>Select procedure type</option>
+                <!-- Changes depending on procedure section specifier -->
+            </select>
+        </div>
+        <div class="col-md-6">
+            <label for="chief-complaint" class="form-label">Chief Complaint <span class="text-danger">*</span></label>
+            <textarea type="text" class="form-control rounded-0" id="chief-complaint" placeholder="Enter complaint (max 255)"  maxlength="255" required></textarea>
+        </div>
+        <div class="col-md-6">
+            <label for="history-of-present-illness" class="form-label">History of Present Illness <span class="text-danger">*</span></label>
+            <textarea type="text" class="form-control rounded-0" id="history-of-present-illness" placeholder="Enter history (max 255)" required></textarea>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <h4 class="display-7">Patients Vital Signs</h4>
+    </div>
+    <div class="row flex-row d-flex g-3 mt-1">
+         <div class="col-md-3">
+                <label for="date" class="form-label">Blood Pressure  <span class="text-danger">*</span></label>
+                <input type="text" class="form-control rounded-0" id="blood-pressure" placeholder="Enter blood pressure" required>
+        </div>
+         <div class="col-md-3">
+                <label for="date" class="form-label">Pulse Rate  <span class="text-danger">*</span></label>
+                <input type="text" class="form-control rounded-0" id="pulse-rate" placeholder="Enter pulse rate" required>
+        </div>
+         <div class="col-md-3">
+                <label for="date" class="form-label">Respiratory rate  <span class="text-danger">*</span></label>
+                <input type="text" class="form-control rounded-0" id="respiratory-rate" placeholder="Enter respiratory rate" required>
+        </div>
+         <div class="col-md-3">
+                <label for="date" class="form-label">Temperature  <span class="text-danger">*</span></label>
+                <input type="text" class="form-control rounded-0" id="temperature" placeholder="Enter temperature" required>
+        </div>
+    </div>
+    <div class="col mt-5 ">
+            <button id="add-procedure-log" type="submit" class="btn btn-success">Add Procedure Log</button>
+    </div>
+</form>
