@@ -3,13 +3,7 @@
         <button class="btn rounded-0 me-3 border" id="back-to-lab-logs" type="submit">
             <img src="\assets/icons/back.svg" alt="">
         </button>
-        <p3 class="display-6">Laboratory Logs > {{REPORT-ID}} </h1>
-    </div>
-    <div class="col d-flex justify-content-end align-items-center">
-        <p3 class="display-7  me-3">Last Version Saved: {{LAST-DATE}} </p3>
-        <button id="lab-edit" name= {{REPORT-ID}} type="button" class="btn btn-success rounded-0">
-            Edit information
-        </button>
+        <p3 class="display-6">Laboratory Logs &gt; {{REPORT-ID}} </h1>
     </div>
 </div>
 <div class="col mt-5">
@@ -28,6 +22,22 @@
         </div>
         <div class="col d-flex justify-content-end">
              <p4 class="display-7">{{DATE}}</p4>
+        </div>
+    </div>
+    <div class="row d-flex justify-content-between align-items-center px-3 border-top">
+        <div class="col">
+            <p3 class="display-7">Clinician Name</p3>
+        </div>
+        <div class="col d-flex justify-content-end">
+             <p4 class="display-7">{{CLINICIAN-NAME}}</p4>
+        </div>
+    </div>
+    <div class="row d-flex bg-secondary bg-opacity-25 justify-content-between align-items-center px-3 border-top">
+        <div class="col">
+            <p3 class="display-7">Clinician ID</p3>
+        </div>
+        <div class="col d-flex justify-content-end">
+             <p4 class="display-7">{{CLINICIAN-ID}}</p4>
         </div>
     </div>
      <div class="row d-flex justify-content-between align-items-center px-3 border-top">

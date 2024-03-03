@@ -1,15 +1,20 @@
 <h1 class="display-4 mt-3"><strong>Patient Chart</strong></h1>
 <p3 class="display-7">Last Version Saved: {{LAST-DATE}} </p3>
 <div class="col align-items-center mt-5">
+    <div id="modal-container"></div>
     <!-- SEARCH BAR -->
     <div class="row d-flex justify-content-between no-gutters align-items-center">
-        <div class="col">
-            <form class="d-flex align-items-center">
-                <input class="form-control me-3" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn ms-0 rounded-0 border" type="submit">
+        <div class="col pe-4">
+            <div class="row">
+                <div class="col">
+                <input class="form-control me-3" type="text" id="search-bar" placeholder="Search" aria-label="Search">
+                </div>
+                <div class="col-auto">
+                <button class="btn ms-0 rounded-0 border" type="button" id="search" name="{{SEARCH-BUTTON}}">
                     <img src="\assets/icons/search.svg" alt="">
                 </button>
-            </form>
+                </div>
+            </div>
         </div>
         <!-- FILTER -->
         <div class="col-auto me-2 dropdown">
@@ -17,9 +22,11 @@
                     <img src="\assets/icons/filter.svg">
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <li><a class="dropdown-item" href="#" onclick="handleSelection('Option 1')">Option 1</a></li>
-                <li><a class="dropdown-item" href="#" onclick="handleSelection('Option 2')">Option 2</a></li>
-                <li><a class="dropdown-item" href="#" onclick="handleSelection('Option 3')">Option 3</a></li>
+                <li><a class="dropdown-item" href="#" onclick="insert_to_table(`/clinician/patient-chart/0/patient_admission_date/desc{{SEARCH}}`)">recently admitted</a></li>
+                <li><a class="dropdown-item" href="#" onclick="insert_to_table(`/clinician/patient-chart/0/patient_admission_date/asc{{SEARCH}}`)">oldest admitted</a></li>
+                <li><a class="dropdown-item" href="#" onclick="insert_to_table(`/clinician/patient-chart/0/patient_last_updated/desc{{SEARCH}}`)">most recent update</a></li>
+                <li><a class="dropdown-item" href="#" onclick="insert_to_table(`/clinician/patient-chart/0/patient_last_updated/asc{{SEARCH}}`)">oldest update</a></li>
+                <li><a class="dropdown-item" href="#" onclick="insert_to_table(`/clinician/patient-chart/0/instructor_name/desc{{SEARCH}}`)">instructor name</a></li>
             </ul>
         </div>
         <!-- ADD NEW -->

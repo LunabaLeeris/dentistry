@@ -16,9 +16,9 @@
                     <img src="\assets/icons/filter.svg">
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <li><a class="dropdown-item" href="#" onclick="handleSelection('Option 1')">Option 1</a></li>
-                <li><a class="dropdown-item" href="#" onclick="handleSelection('Option 2')">Option 2</a></li>
-                <li><a class="dropdown-item" href="#" onclick="handleSelection('Option 3')">Option 3</a></li>
+                <li><a class="dropdown-item" href="#" onclick="handleSelection('Option 1')">Most Recent</a></li>
+                <li><a class="dropdown-item" href="#" onclick="handleSelection('Option 2')">Oldest</a></li>
+                <li><a class="dropdown-item" href="#" onclick="handleSelection('Option 3')">Clinician</a></li>
             </ul>
         </div>
     </div>
@@ -40,6 +40,7 @@
                     {{TABLE-DATA}}
                 </tr>
             </tbody>
+            {{TABLE-NAV}}
         </table>
     </div>
     {{EMPTY-TAG}}

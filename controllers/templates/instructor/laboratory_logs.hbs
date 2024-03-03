@@ -2,22 +2,26 @@
 <p3 class="display-7">Last Version Saved: {{LAST-DATE}} </p3>
 <div class="col align-items-center mt-5 ">
     <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-        <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+        <input type="radio" class="btn-check" name="btnradio" onclick="insert_to_table(`/instructor/laboratory-logs/0/laboratory_date/desc/current_date{{SEARCH}}`)" id="btnradio1" autocomplete="off" {{TODAY}}>
         <label class="btn rounded-0 border-bottom-0" for="btnradio1">Today’s Laboratory Logs</label>
 
-        <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+        <input type="radio" class="btn-check" name="btnradio" onclick="insert_to_table(`/instructor/laboratory-logs/0/laboratory_date/desc/-{{SEARCH}}`)" id="btnradio2" autocomplete="off" {{ALL}}>
         <label class="btn rounded-0 border-bottom-0" for="btnradio2">All Laboratory Logs</label>
     </div>
     <div class="col border-top border-black  border-1 mb-4"></div>
     <!-- SEARCH BAR -->
     <div class="row d-flex justify-content-left no-gutters align-items-center">
-        <div class="col">
-            <form class="d-flex align-items-center">
-                <input class="form-control me-3" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn ms-0 rounded-0 border" type="submit">
+        <div class="col pe-4">
+            <div class="row">
+                <div class="col">
+                <input class="form-control me-3" type="text" id="search-bar" placeholder="Search" aria-label="Search">
+                </div>
+                <div class="col-auto">
+                <button class="btn ms-0 rounded-0 border" onclick="insert_to_table(`/instructor/laboratory-logs/0/laboratory_date/desc/{{DATE-FILTER}}{{SEARCH}}" type="button" id="search" name="{{SEARCH-BUTTON}}">
                     <img src="\assets/icons/search.svg" alt="">
                 </button>
-            </form>
+                </div>
+            </div>
         </div>
         <!-- FILTER -->
         <div class="col-auto me-2 dropdown">
@@ -25,9 +29,9 @@
                     <img src="\assets/icons/filter.svg">
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <li><a class="dropdown-item" href="#" onclick="handleSelection('Option 1')">Option 1</a></li>
-                <li><a class="dropdown-item" href="#" onclick="handleSelection('Option 2')">Option 2</a></li>
-                <li><a class="dropdown-item" href="#" onclick="handleSelection('Option 3')">Option 3</a></li>
+                <li><a class="dropdown-item" href="#" onclick="insert_to_table(`/instructor/laboratory-logs/0/laboratory_date/desc/{{DATE-FILTER}}{{SEARCH}}">Most Recent</a></li>
+                <li><a class="dropdown-item" href="#" onclick="insert_to_table('/instructor/laboratory-logs/0/laboratory_date/asc/{{DATE-FILTER}}{{SEARCH}}')">Oldest</a></li>
+                <li><a class="dropdown-item" href="#" onclick="insert_to_table(/instructor/laboratory-logs/0/clinician_id/desc/{{DATE-FILTER}}{{SEARCH}}')">Clinician</a></li>
             </ul>
         </div>
         <!-- ADD NEW -->
