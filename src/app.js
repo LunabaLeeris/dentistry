@@ -7,7 +7,7 @@ const instructor = require("./routes/instructor-page");
 const login =  require("./routes/login-page");
 
 // stages the database
-const database = require("./db.js");
+const database = require("../db.js");
 database.test_connection();
 
 // starts the app
