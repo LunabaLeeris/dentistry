@@ -1,0 +1,65 @@
+<div class="row">
+    <div class="col d-flex align-items-end">
+        <button class="btn rounded-0 me-3 border" id="back-to-lab-logs" type="submit">
+            <img src="\assets/icons/back.svg" alt="">
+        </button>
+        <p3 class="display-6">Laboratory Logs > {{REPORT-ID}} </h1>
+    </div>
+    <div class="col d-flex justify-content-end align-items-center">
+        <p3 class="display-7  me-3">Last Version Saved: {{LAST-DATE}} </p3>
+        <button id="lab-edit" name= {{REPORT-ID}} type="button" class="btn btn-success rounded-0">
+            Edit information
+        </button>
+    </div>
+</div>
+<div class="col mt-5">
+    <div class="row" id="add-log-success"></div>
+    <div class="row d-flex justify-content-between align-items-center px-3 border-top">
+        <div class="col">
+            <p3 class="display-7">Report ID</p3>
+        </div>
+        <div class="col d-flex justify-content-end">
+             <p4 class="display-7">{{REPORT-ID}}</p4>
+        </div>
+    </div>
+    <div class="row d-flex bg-secondary bg-opacity-25 justify-content-between align-items-center px-3 border-top">
+        <div class="col">
+            <p3 class="display-7">Date</p3>
+        </div>
+        <div class="col d-flex justify-content-end">
+             <p4 class="display-7">{{DATE}}</p4>
+        </div>
+    </div>
+     <div class="row d-flex justify-content-between align-items-center px-3 border-top">
+        <div class="col">
+            <p3 class="display-7">Time In</p3>
+        </div>
+        <div class="col d-flex justify-content-end">
+             <p4 class="display-7">{{TIME-IN}}</p4>
+        </div>
+    </div>
+    <div class="row d-flex bg-secondary bg-opacity-25 justify-content-between align-items-center px-3 border-top"> 
+        <div class="col">
+            <p3 class="display-7">Time Out</p3>
+        </div>
+        <div class="col d-flex justify-content-end">
+             <p4 class="display-7">{{TIME-OUT}}</p4>
+        </div>
+    </div>
+     <div class="row d-flex justify-content-between align-items-center px-3 border-top">
+        <div class="col">
+            <p3 class="display-7">Instructor Name</p3>
+        </div>
+        <div class="col d-flex justify-content-end">
+             <p4 class="display-7">{{INSTRUCTOR-NAME}}</p4>
+        </div>
+    </div>
+    <div class="row d-flex bg-secondary bg-opacity-25 justify-content-between align-items-center px-3 border-top border-bottom">
+        <div class="col">
+            <p3 class="display-7">Remarks</p3>
+        </div>
+        <div class="col d-flex justify-content-end">
+             <p4 class="display-7">{{REMARKS}}</p4>
+        </div>
+    </div>
+</div>

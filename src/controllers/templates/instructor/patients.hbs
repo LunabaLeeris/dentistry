@@ -1,0 +1,52 @@
+<h1 class="display-4 mt-3"><strong>Patients</strong></h1>
+<div class="col-md-11 align-items-center mt-5 ">
+    <!-- SEARCH BAR -->
+    <div class="row d-flex justify-content-left no-gutters align-items-center">
+        <div class="col pe-4">
+            <div class="row">
+                <div class="col">
+                <input class="form-control me-3" type="text" id="search-bar" placeholder="Search" aria-label="Search">
+                </div>
+                <div class="col-auto">
+                <button class="btn ms-0 rounded-0 border" type="button" onclick="insert_to_table(`/instructor/patients/0/patient-last-updated/desc{{SEARCH}}`, 'table-data')" id="search" name="{{SEARCH-BUTTON}}">
+                    <img src="\assets/icons/search.svg" alt="">
+                </button>
+                </div>
+            </div>
+        </div>
+        <!-- FILTER -->
+        <div class="col-auto me-2 dropdown">
+            <button class="btn btn-secondary dropdown-toggle mt-0" type="button" id="filter-lab-logs" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="\assets/icons/filter.svg">
+            </button>
+            <ul class="w-auto dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><a class="dropdown-item" href="#" onclick="insert_to_table(`/instructor/patients/0/patient_name/desc/{{SEARCH}}`, `table-data`)">Patient Name</a></li>
+                <li><a class="dropdown-item" href="#" onclick="insert_to_table(`/instructor/patients/0/patient_admission_date/desc/{{SEARCH}}`, `table-data`)">Recently admitted</a></li>
+                <li><a class="dropdown-item" href="#" onclick="insert_to_table(`/instructor/patients/0/patient_admission_date/asc/{{SEARCH}}`, `table-data`)">Oldest admission</a></li>
+                <li><a class="dropdown-item" href="#" onclick="insert_to_table(`/instructor/patients/0/most_recent_procedure/desc/{{SEARCH}}`, `table-data`)">Most Recent Procedure</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- TABLE DATA -->
+    <div class="col mt-1 table-responsive">
+        <table class="table w-100 table-md table-bordered mt-3">
+            <thead>
+                <tr class="table-primary">
+                <th scope="col">#</th>
+                <th scope="col">Patient's Name</th>
+                <th scope="col">Patient ID</th>
+                <th scope="col">Admission Date</th>
+                <th scope="col">Most Recent Procedure</th>
+                <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    {{TABLE-DATA}}
+                </tr>
+            </tbody>
+            {{TABLE-NAV}}
+        </table>
+    </div>
+    {{EMPTY-TAG}}
+</div>

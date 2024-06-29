@@ -1,0 +1,31 @@
+<h1 class="display-4 mt-3"><strong>Procedure Logs</strong></h1>
+<div class="col align-items-center mt-4 mb-4">
+    <!-- SEARCH BAR -->
+    <div class="row d-flex justify-content-between no-gutters align-items-center">
+        <div class="col">
+            <form class="d-flex align-items-center">
+                <input class="form-control me-3" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn ms-0 rounded-0 border" type="submit">
+                    <img src="\assets/icons/search.svg" alt="">
+                </button>
+            </form>
+        </div>
+        <!-- FILTER -->
+        <div class="col-auto me-2 dropdown">
+            <button class="btn btn-secondary dropdown-toggle mt-0" type="button" id="filter-lab-logs" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="\assets/icons/filter.svg">
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><a class="dropdown-item" href="#" onclick="sort(most_recent)">Most recent</a></li>
+                <li><a class="dropdown-item" href="#" onclick="sort(oldest)">Oldest</a></li>
+                <li><a class="dropdown-item" href="#" onclick="sort(instructor)">Instructor</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="btn-group" role="group" aria-label="Basic radio toggle button group"></div>
+{{CLINIC-LEVELS}}
+</div>
+<div class="border-top border-black border-1 mb-4"></div>
+{{TAGS}}
+{{TABLE-DATA}}

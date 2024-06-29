@@ -1,0 +1,120 @@
+ <div class="row align-items-center">
+    <div class="col-auto ">
+        <button class="btn ms-0 rounded-0 border" id="back-to-patient-chart" type="submit">
+            <img src="\assets/icons/back.svg" alt="">
+        </button>
+    </div>
+    <div class="col">
+        <p3 class="display-6">Patient Chart > Add New Patient</h1>
+    </div>
+</div>
+<form id="PatientFormNew">
+    <div class="row mt-5">
+        <h3 class="display-7 custom-color-blue"><b>Personal Data</b></h4>
+    </div>
+    <div class="row flex-row d-flex mt-1 g-3">
+        <div class="row">
+            <label for="date" class="form-label">Sex  <span class="text-danger">*</span></label>
+        </div>
+        <div class="row d-flex ms-2">
+            <div class="col-auto form-check">
+                <input class="form-check-input" type="radio" name="sex" id="male" value="male" checked>
+                <label class="form-check-label" for="male">
+                    Male
+                </label>
+            </div>
+            <div class="col-auto form-check">
+                <input class="form-check-input" type="radio" name="sex" id="female" value="female">
+                <label class="form-check-label" for="female">
+                    Female
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="row flex-row d-flex mt-2 g-3">
+        <div class="col-md-3 form-group">
+            <label for="last-name" class="form-label">Last Name <span class="text-danger">*</span></label>
+            <input type="text" class="form-control rounded-0" id="last-name" name="last_name" placeholder="Enter surname" max="50" required>
+        </div>
+        <div class="col-md-3 form-group">
+            <label for="first-name" class="form-label">First Name</label>
+            <input type="text" class="form-control rounded-0" id="first-name" name="first_name" placeholder="Enter first name" max="50" required>
+        </div>
+        <div class="col-md-3 form-group">
+            <label for="middle-name" class="form-label">Middle Name</label>
+            <input type="text" class="form-control rounded-0" id="middle-name" name="middle_name" placeholder="Enter middle name" max="50" required>
+        </div>
+        <div class="col-md-3 form-group">
+            <label for="preferred-name" class="form-label">Preferred Name</label>
+            <input type="text" class="form-control rounded-0" id="preferred-name" name="preferred_name" placeholder="Enter Preferred Name" max="50" required>
+        </div>
+        <div class="col-md-3 form-group">
+            <label for="date-of-birth" class="form-label">Date Of Birth</label>
+            <input type="date" class="form-control rounded-0" id="date-of-birth" name="date_of_birth" placeholder="Enter Date Of Birth" required>
+        </div>
+        <div class="col-md-3 form-group">
+            <label for="age" class="form-label">Age</label>
+            <input type="number" class="form-control rounded-0" id="age" name="age" placeholder="Enter Age" max="50" required>
+        </div>
+        <div class="col-md-3 form-group">
+            <label for="weight" class="form-label">Weight (kg)</label>
+            <input type="number" class="form-control rounded-0" id="weight" name="weight" placeholder="Enter Weight" required>
+        </div>
+        <div class="col-md-3 form-group">
+            <label for="height" class="form-label">Height (cm)</label>
+            <input type="number" class="form-control rounded-0" id="height" name="height" placeholder="Enter Height" required>
+        </div>
+        <div class="col-md-3 form-group">
+            <label for="occupation" class="form-label">Occupation</label>
+            <input type="text" class="form-control rounded-0" id="occupation" name="occupation" placeholder="Enter Occupation" max="50" required>
+        </div>
+        <div class="col-md-3 form-group">
+            <label for="religion" class="form-label">Religion</label>
+            <input type="text" class="form-control rounded-0" id="religion" name="religion" placeholder="Enter Religion" max="50" required>
+        </div>
+        <div class="col-md-3 form-group">
+            <label for="marital-status" class="form-label">Marital Status</label>
+            <input type="text" class="form-control rounded-0" id="marital-status" name="marital_status" placeholder="Enter Marital Status" max="7" required>
+        </div>
+        <div class="col-md-3 form-group">
+            <label for="number-of-children" class="form-label">Number Of Children</label>
+            <input type="number" class="form-control rounded-0" id="number-of-children" name="number_of_children" placeholder="Enter Number Of Children" required>
+        </div>
+        <div class="col-md-3 form-group">
+            <label for="cellphone-number" class="form-label">Cellphone Number</label>
+            <input type="tel" class="form-control rounded-0" id="cellphone-number" name="cellphone_number" placeholder="Enter Cellphone Number" required>
+        </div>
+        <div class="col-md-3 form-group">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control rounded-0" id="email" name="email" placeholder="Enter Email" required>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <h4 class="display-7">Permanent Address</h4>
+    </div>
+    <div class="row flex-row d-flex g-3">
+        <div class="col-md-4 form-group mt-3">
+            <label for="province" class="form-label">Province</label>
+            <input type="text" class="form-control rounded-0" id="province" name="province" placeholder="Enter Province" max="50" required>
+        </div>
+        <div class="col-md-4 form-group">
+            <label for="city-municipality" class="form-label">City/Municipality</label>
+            <input type="text" class="form-control rounded-0" id="city-municipality" name="city_municipality" placeholder="Enter City/Municipality" max="50" required>
+        </div>
+        <div class="col-md-4 form-group">
+            <label for="house-number-st" class="form-label">House No./St</label>
+            <input type="text" class="form-control rounded-0" id="house-number-st" name="house_number_st" placeholder="Enter House No./St" max="50" required>
+        </div>
+        <div class="col-md-4 form-group">
+            <label for="barangay" class="form-label">Barangay</label>
+            <input type="text" class="form-control rounded-0" id="barangay" name="barangay" placeholder="Enter Barangay" max="50" required>
+        </div>
+        <div class="col-md-4 form-group">
+            <label for="postal-code" class="form-label">Postal Code</label>
+            <input type="text" class="form-control rounded-0" id="postal-code" name="postal_code" placeholder="Enter Postal Code" max="4" required>
+        </div>
+    </div>
+    <div class="col mt-5 ">
+            <button id="add-patient" type="button" class="btn btn-success">Add Patient</button>
+    </div>
+</form>

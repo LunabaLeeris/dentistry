@@ -1,0 +1,63 @@
+<h1 class="display-4 mt-3"><strong>Laboratory Logs</strong></h1>
+<p3 class="display-7">Last Version Saved: {{LAST-DATE}} </p3>
+<div class="col align-items-center mt-5 ">
+    <div id="modal-container"></div>
+    <!-- SEARCH BAR -->
+    <div class="row d-flex justify-content-left no-gutters align-items-center">
+        <div class="col pe-4">
+            <div class="row">
+                <div class="col">
+                <input class="form-control me-3" type="text" id="search-bar" placeholder="Search" aria-label="Search">
+                </div>
+                <div class="col-auto">
+                <button class="btn ms-0 rounded-0 border" type="button" id="search" name="{{SEARCH-BUTTON}}">
+                    <img src="\assets/icons/search.svg" alt="">
+                </button>
+                </div>
+            </div>
+        </div>
+        <!-- FILTER -->
+        <div class="col-auto me-2 dropdown">
+            <button class="btn btn-secondary dropdown-toggle mt-0" type="button" id="filter-lab-logs" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="\assets/icons/filter.svg">
+            </button>
+            <ul class="dropdown-menu w-auto" aria-labelledby="dropdownMenuButton">
+                <li><a class="dropdown-item" href="#" onclick="insert_to_table(`/clinician/laboratory-logs/0/laboratory_date/desc{{SEARCH}}`)">most recent lab date</a></li>
+                <li><a class="dropdown-item" href="#" onclick="insert_to_table(`/clinician/laboratory-logs/0/laboratory_date/asc{{SEARCH}}`)">oldest lab date</a></li>
+                <li><a class="dropdown-item" href="#" onclick="insert_to_table(`/clinician/laboratory-logs/0/laboratory_last_updated/desc{{SEARCH}}`)">most recent update</a></li>
+                <li><a class="dropdown-item" href="#" onclick="insert_to_table(`/clinician/laboratory-logs/0/laboratory_last_updated/asc{{SEARCH}}`)">oldest update</a></li>
+                <li><a class="dropdown-item" href="#" onclick="insert_to_table(`/clinician/laboratory-logs/0/instructor_name/desc{{SEARCH}}`)">instructor name</a></li>
+            </ul>
+        </div>
+        <!-- ADD NEW -->
+        <div class="col-auto">
+            <button id="add-new-lab-logs" type="button" class="btn btn-success rounded-0">
+                Add new laboratory log
+            </button>
+        </div>
+    </div>
+</div>
+<!-- TABLE DATA -->
+<div class="col mt-1 table-responsive">
+    <table class="table w-100 table-md table-bordered mt-3">
+        <thead>
+            <tr class="table-primary">
+            <th scope="col">#</th>
+            <th scope="col">ReportID</th>
+            <th scope="col">Laboratory Date</th>
+            <th scope="col">Time In</th>
+            <th scope="col">Time out</th>
+            <th scope="col">Instructor Name</th>
+            <th scope="col">Remarks</th>
+            <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+                {{TABLE-DATA}}
+        </tbody>
+    </table>
+</div>
+{{EMPTY-TAG}}
+<div class="col d-flex justify-content-center mt-5">
+{{TABLE-NAV}}
+</div>

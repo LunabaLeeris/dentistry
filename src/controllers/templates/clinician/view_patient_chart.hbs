@@ -1,0 +1,169 @@
+<div class="row">
+    <div class="col-md-7 d-flex align-items-end">
+        <button class="btn rounded-0 me-3 border" id="back-to-patient-chart" type="submit">
+            <img src="\assets/icons/back.svg" alt="">
+        </button>
+        <p3 class="display-6">Patient Chart &gt; {{PATIENT-NAME}}</h1>
+    </div>
+    <div class="col d-flex justify-content-end align-items-center">
+        <p3 class="display-7  me-3">Last Version Saved: {{LAST-DATE}} </p3>
+        {{EDIT-BUTTON}}
+    </div>
+</div>
+<div class="row mt-3" id="add-patient-success"></div>
+<form id="PatientFormEdit">
+<div class="row mt-5">
+    <div class="col-md-2 p-3 ">
+        <img src="/assets\img\sign_up\profile_placeholder.png" class="img w-100 h-auto">
+    </div>
+    <div class="col ms-4">
+        <div class="row">
+            <h2 class="display-7"><b>{{PATIENT-NAME}}</b></h1>
+            <p3 class="display-7">PATIENT</h1>
+        </div>
+        <div class="row">
+         <!-- ID NUMBER -->
+            <div class="col-auto mt-3">
+                <div class="col d-flex">
+                    <div class="col-auto pr-0"> <img src="\assets/icons/id_number.svg" alt="SVG Image"></div>
+                    <div class="col-auto me-2"><p class="display-7 mx-1 custom-color-green">Patient ID</p></div>
+                    <p class="col display-7 mb-0 mx-1">{{PATIENT-ID}}</p> 
+                </div>
+               <div class="col d-flex align-items-center">
+                    <div class="col-auto  pr-0">
+                        <img src="\assets/icons/id_number.svg" alt="SVG Image">
+                    </div>
+                    <div class="col-auto">
+                        <p class="display-7 mx-1 custom-color-green text-center my-auto">Admission Date</p>
+                    </div>
+                    <div class="col">
+                        <input type="date" class="form-control rounded-0 {{BORDER}}" name="admission_date" {{ADMISSION-DATE}} {{READONLY}} required>
+                    </div>
+                </div>
+                <div class="col d-flex align-items-center">
+                    <div class="col-auto  pr-0"> <img src="\assets/icons/id_number.svg" alt="SVG Image"></div>
+                    <div class="col-auto  me-2"><p class="display-7 mx-1 custom-color-green text-center my-auto">E-Mail</p></div>
+                    <div class="col"><input type="email" maxlength="50" class="form-control rounded-0 {{BORDER}}" name="email" {{READONLY}} {{E-MAIL}} required></div>
+                </div>
+            </div>
+            <div class="col-auto mt-3 ">
+                <div class="col d-flex align-items-center">
+                    <div class="col-auto  pr-0"> <img src="\assets/icons/id_number.svg" alt="SVG Image"></div>
+                    <div class="col-auto  me-2"><p class="display-7 mx-1 custom-color-green text-center my-auto">Patient Sex</p></div>
+                    <div class="col"><input type="text" maxlength="7" class="form-control rounded-0 {{BORDER}}" name="sex" {{READONLY}} {{PATIENT-SEX}} required></div>
+                </div>
+                <div class="col d-flex align-items-center">
+                    <div class="col-auto  pr-0"> <img src="\assets/icons/id_number.svg" alt="SVG Image"></div>
+                    <div class="col-auto me-2"><p class="display-7 mx-1 custom-color-green text-center my-auto">Contact Number</p></div>
+                    <div class="col"><input type="phone number" maxlength="11" class="form-control rounded-0 {{BORDER}}" name="cellphone_number" {{READONLY}} {{CONTACT-NUMBER}} > </div>
+                </div> 
+                <div class="col d-flex align-items-center">
+                    <div class="col-auto  pr-0"> <img src="\assets/icons/id_number.svg" alt="SVG Image"></div>
+                    <div class="col-auto  me-2"><p class="display-7 mx-1 custom-color-green  text-center my-auto">Most-Recent Procedure</p></div>
+                    <div class="col"><input class="display-7 mb-0 mx-1 border-0" name="most_recent_procedure" {{MOST-RECENT-PROCEDURE}} readonly> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ <div class="btn-group mt-4" role="group" aria-label="Basic radio toggle button group">
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+        <label class="btn rounded-0 border-bottom-0" for="btnradio1">Personal Data</label>
+
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+        <label class="btn rounded-0 border-bottom-0" for="btnradio2">Progress Notes</label>
+    </div>
+    <div class="col border-top border-black  border-1 mb-4"></div>
+</div>
+<div class="col mt-3 px-5">
+    <h4 class="display-7 custom-color-blue">Basic Information</h4>
+    <div class="row mt-3">
+        <div class="col-md-6 mb-3 form-group d-flex justify-content-between align-items-center">
+            <div class="col-md-3"><label for="last-name" class="form-label">Last Name <span class="text-danger">*</span></label></div>
+            <div class="col"><input type="text" class="form-control rounded-0" id="last-name" name="last_name" required {{READONLY}} {{LAST-NAME}}></div>
+        </div>
+        <div class="col-md-6 mb-3 form-group d-flex justify-content-between align-items-center">
+            <div class="col-md-3"><label for="weight" class="form-label">Weight <span class="text-danger">*</span></label></div>
+            <div class="col"><input type="number" step="any" class="form-control rounded-0" id="weight" name="weight" required {{READONLY}} {{WEIGHT}}></div>
+        </div>
+    </div>
+    <div class="row mt-1">
+        <div class="col-md-6 mb-3 form-group d-flex justify-content-between align-items-center">
+            <div class="col-md-3"><label for="middle-name" class="form-label">Middle Name <span class="text-danger">*</span></label></div>
+            <div class="col"><input type="text" class="form-control rounded-0" id="middle-name" name="middle_name" required {{READONLY}} {{MIDDLE-NAME}}></div>
+        </div>
+        <div class="col-md-6 mb-3 form-group d-flex justify-content-between align-items-center">
+            <div class="col-md-3"><label for="height" class="form-label">Height <span class="text-danger">*</span></label></div>
+            <div class="col"><input type="number" step="any" class="form-control rounded-0" id="height" name="height" required {{READONLY}} {{HEIGHT}}></div>
+        </div>
+    </div>
+    <div class="row mt-1">
+        <div class="col-md-6 mb-3 form-group d-flex justify-content-between align-items-center">
+            <div class="col-md-3"><label for="first-name" class="form-label">First Name <span class="text-danger">*</span></label></div>
+            <div class="col"><input type="text" class="form-control rounded-0" id="first-name" name="first_name" required {{READONLY}} {{FIRST-NAME}}></div>
+        </div>
+        <div class="col-md-6 mb-3 form-group d-flex justify-content-between align-items-center">
+            <div class="col-md-3"><label for="occupation" class="form-label">Occupation <span class="text-danger">*</span></label></div>
+            <div class="col"><input type="text" class="form-control rounded-0" id="occupation" name="occupation" required {{READONLY}} {{OCCUPATION}}></div>
+        </div>
+    </div>
+    <div class="row mt-1">
+        <div class="col-md-6 mb-3 form-group d-flex justify-content-between align-items-center">
+            <div class="col-md-3"><label for="preferred-name" class="form-label">Preferred Name <span class="text-danger">*</span></label></div>
+            <div class="col"><input type="text" class="form-control rounded-0" id="preferred-name" name="preferred_name" required {{READONLY}} {{PREFERRED-NAME}}></div>
+        </div>
+        <div class="col-md-6 mb-3 form-group d-flex justify-content-between align-items-center">
+            <div class="col-md-3"><label for="religion" class="form-label">Religion <span class="text-danger">*</span></label></div>
+            <div class="col"><input type="text" class="form-control rounded-0" id="religion" name="religion" required {{READONLY}} {{RELIGION}}></div>
+        </div>
+    </div>
+    <div class="row mt-1">
+        <div class="col-md-6 mb-3 form-group d-flex justify-content-between align-items-center">
+            <div class="col-md-3"><label for="date-of-birth" class="form-label">Date Of Birth <span class="text-danger">*</span></label></div>
+            <div class="col"><input type="date" class="form-control rounded-0" id="date-of-birth" name="date_of_birth" required {{READONLY}} {{DATE-OF-BIRTH}}></div>
+        </div>
+        <div class="col-md-6 mb-3 form-group d-flex justify-content-between align-items-center">
+            <div class="col-md-3"><label for="marital-status" class="form-label">Marital Status <span class="text-danger">*</span></label></div>
+            <div class="col"><input type="text" class="form-control rounded-0" id="marital-status" name="marital_status" required {{READONLY}} {{MARITAL-STATUS}}></div>
+        </div>
+    </div>
+    <div class="row mt-1">
+        <div class="col-md-6 mb-3 form-group d-flex justify-content-between align-items-center">
+            <div class="col-md-3"><label for="age" class="form-label">Age <span class="text-danger">*</span></label></div>
+            <div class="col"><input type="number" class="form-control rounded-0" id="age" name="age" required {{READONLY}} {{AGE}}></div>
+        </div>
+        <div class="col-md-6 mb-3 form-group d-flex justify-content-between align-items-center">
+            <div class="col-md-3"><label for="number-of-children" class="form-label">Number of Children <span class="text-danger">*</span></label></div>
+            <div class="col"><input type="number" class="form-control rounded-0" id="number-of-children" name="number_of_children" required {{READONLY}} {{NUMBER-OF-CHILDREN}}></div>
+        </div>
+    </div>
+    <h4 class="display-7 custom-color-blue mt-4">Permanent Address Information</h4>
+    <div class="row mt-1 mt-3">
+        <div class="col-md-6 mb-3 form-group d-flex justify-content-between align-items-center">
+            <div class="col-md-3"><label for="province" class="form-label">Province <span class="text-danger">*</span></label></div>
+            <div class="col"><input type="text" class="form-control rounded-0" id="province" name="province" required maxlength="255" {{READONLY}} {{PROVINCE}}></div>
+        </div>
+        <div class="col-md-6 mb-3 form-group d-flex justify-content-between align-items-center">
+            <div class="col-md-3"><label for="barangay" class="form-label">Barangay <span class="text-danger">*</span></label></div>
+            <div class="col"><input type="text" class="form-control rounded-0" id="barangay" name="barangay" required maxlength="50" {{READONLY}} {{BARANGAY}}></div>
+        </div>
+    </div>
+    <div class="row mt-1">
+        <div class="col-md-6 mb-3 form-group d-flex justify-content-between align-items-center">
+            <div class="col-md-3"><label for="city-municipality" class="form-label">City/Municipality <span class="text-danger">*</span></label></div>
+            <div class="col"><input type="text" class="form-control rounded-0" id="city-municipality" name="city_municipality" required maxlength="50" {{READONLY}} {{CITY-MUNICIPALITY}}></div>
+        </div>
+        <div class="col-md-6 mb-3 form-group d-flex justify-content-between align-items-center">
+            <div class="col-md-3"><label for="postal-code" class="form-label">Postal Code <span class="text-danger">*</span></label></div>
+            <div class="col"><input type="text" class="form-control rounded-0" id="postal-code" name="postal_code" required maxlength="4" {{READONLY}} {{POSTAL-CODE}}></div>
+        </div>
+    </div>
+    <div class="row mt-1">
+        <div class="col-md-6 mb-3 form-group d-flex justify-content-between align-items-center">
+            <div class="col-md-3"><label for="house-number-st" class="form-label">House No./St. <span class="text-danger">*</span></label></div>
+            <div class="col"><input type="text" class="form-control rounded-0" id="house-number-st" name="house_number_st" required maxlength="50" {{READONLY}} {{HOUSE-NUMBER}}></div>
+        </div>
+    </div>
+</div>
+</form>
+

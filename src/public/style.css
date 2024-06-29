@@ -1,0 +1,140 @@
+body {
+    height: 100%;
+    width: 100vw;
+}
+.empty-row{
+    height: 1vh;
+    width: 100vw;
+}
+/* for buttons */
+.active-button{
+    background-color: #7FB1DC;
+}
+
+.btn:hover{
+    background-color: #7FB1DC;
+}
+/*custom colors*/
+.custom-color-blue{
+    color: #34418E;
+}
+
+.custom-bg-color-gray{
+    background-color: #555555;
+}
+
+.custom-color-green{
+    color: #3C763D;
+}
+
+.custom-background-color-blue{
+    background-color: #34418E;
+}
+
+.img-fluid{
+    margin-right: -27px;
+}
+
+.img-logo-small{
+    width: 6vw;
+    height: auto;
+}
+
+.no-gutters [class^="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+/* DROP DOWN STYLE */
+.profile-icon{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    border: 1px solid #555555;
+    height: 70%;
+}
+
+.dropdown-toggle {
+    margin-top: 30px;
+    border: 1px solid #555555;
+    background-color: white; 
+    color: #555555;
+    border-radius: 0; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 70%;
+}
+
+.dropdown-toggle:hover {
+    background-color: #C6C7C8; 
+}
+
+.dropdown-menu {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #555555;
+    border: 1px solid #555555;; 
+    border-radius: 0; 
+    width: 100%;
+}
+
+.dropdown-item {
+    color: #555555;
+    border-radius: 0;
+    width: 100%;
+}
+
+/* input areas */
+.custom-input-group{
+    width: 27vw;
+}
+
+.custom-input-group .form-control {
+    margin-top: 30px;
+    border: 1px solid #555555;
+    background-color: white; 
+    color: #555555;
+    border-radius: 0; 
+    align-items: center;
+    height: 70%;
+}
+
+/* custome margins */
+.custom-margin-mid{
+    margin-top: 80px;
+}
+
+.custom-margin-large{
+    margin-top: 120px;
+}
+
+/* submit button */
+.btn-custom {
+    background-color: #35408E; /* Yellow background */
+    color: #ffffff; /* Black text color */
+    border-radius: 0; /* Rounded corners */
+    padding: 10px 20px; /* Padding */
+    width: 30%;
+    font-size: large;
+  }
+  
+.btn-custom:hover {
+    background-color: #C6C7C8; /* Darker yellow on hover */
+}
+
+/* anchor links */
+.anchor{
+    text-decoration: none !important; /* Remove underline */
+    color: inherit; /* Inherit color from parent */
+}
+
+.sml{
+    font-size: 20px;
+}
+
+.mid{
+    font-size: 15px;
+}
+

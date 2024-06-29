@@ -1,0 +1,49 @@
+<h1 class="display-4 mt-3"><strong>Clinicians</strong></h1>
+<div class="col-md-10 align-items-center mt-5 ">
+    <!-- SEARCH BAR -->
+    <div class="row d-flex justify-content-left no-gutters align-items-center">
+        <div class="col pe-4">
+            <div class="row">
+                <div class="col">
+                <input class="form-control me-3" type="text" id="search-bar" placeholder="Search" aria-label="Search">
+                </div>
+                <div class="col-auto">
+                <button class="btn ms-0 rounded-0 border" type="button" id="search" name="{{SEARCH-BUTTON}}">
+                    <img src="\assets/icons/search.svg" alt="">
+                </button>
+                </div>
+            </div>
+        </div>
+        <!-- FILTER -->
+        <div class="col-auto me-2 dropdown">
+            <button class="btn btn-secondary dropdown-toggle mt-0" type="button" id="filter-lab-logs" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="\assets/icons/filter.svg">
+            </button>
+            <ul class="w-auto dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><a class="dropdown-item" href="#" onclick="insert_to_table(`/instructor/clinicians/0/clinician_id/desc/{{SEARCH}}`), `table-data`">Clinician ID</a></li>
+                <li><a class="dropdown-item" href="#" onclick="insert_to_table(`/instructor/clinicians/0/clinic_level_enrolled/asc/{{SEARCH}}, `table-data``)">Highest Clinic Level</a></li>
+                <li><a class="dropdown-item" href="#" onclick="insert_to_table(`/instructor/clinicians/0/clinic_level_enrolled/desc/{{SEARCH}}, `table-data``)">Lowest Clinic Level</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- TABLE DATA -->
+    <div class="col mt-1 table-responsive">
+        <table class="table w-100 table-md table-bordered mt-3">
+            <thead>
+                <tr class="table-primary">
+                <th scope="col">#</th>
+                <th scope="col">Clinician's Name</th>
+                <th scope="col">Clinician's ID</th>
+                <th scope="col">Current Clinic Level</th>
+                <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    {{TABLE-DATA}}
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    {{EMPTY-TAG}}
+</div>

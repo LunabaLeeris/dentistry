@@ -1,0 +1,64 @@
+<div class="row">
+    <div class="col-md-7 d-flex align-items-end">
+        <button class="btn rounded-0 me-3 border" id="back-to-patient-chart" type="submit">
+            <img src="\assets/icons/back.svg" alt="">
+        </button>
+        <p3 class="display-6">Patient Chart &gt; {{CLINICIAN-NAME}}</h1>
+    </div>
+</div>
+<div class="row mt-3" id="add-patient-success"></div>
+<form id="PatientFormEdit">
+<div class="row mt-5">
+    <div class="col-md-2 p-3 ">
+        <img src="/assets\img\sign_up\profile_placeholder.png" class="img w-100 h-auto">
+    </div>
+    <div class="col ms-4">
+        <div class="row">
+            <h2 class="display-7"><b>{{CLINICIAN-NAME}}</b></h1>
+            <p3 class="display-7">CLINICIAN</h1>
+        </div>
+        <div class="row">
+         <!-- ID NUMBER -->
+            <div class="col-auto mt-3">
+                <div class="col d-flex">
+                    <div class="col-auto pr-0"> <img src="\assets/icons/id_number.svg" alt="SVG Image"></div>
+                    <div class="col-auto me-2"><p class="display-7 mx-1 custom-color-green">Clinician ID</p></div>
+                    <p class="col display-7 mb-0 mx-1">{{CLINICIAN-ID}}</p> 
+                </div>
+                 <div class="col d-flex align-items-center">
+                    <div class="col-auto  pr-0"> <img src="\assets/icons/id_number.svg" alt="SVG Image"></div>
+                    <div class="col-auto  me-2"><p class="display-7 mx-1 custom-color-green text-center my-auto">Clinic Level Enrolled</p></div>
+                    <p class="col display-7 mb-0 mx-1">{{CLINIC-LEVEL}}</p> 
+                </div>
+                <div class="col d-flex align-items-center">
+                    <div class="col-auto  pr-0"> <img src="\assets/icons/id_number.svg" alt="SVG Image"></div>
+                    <div class="col-auto  me-2"><p class="display-7 mx-1 custom-color-green text-center my-auto">E-Mail</p></div>
+                    <p class="col display-7 mb-0 mx-1">{{EMAIL}}</p> 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+    <input type="radio" class="btn-check" name="btnradio" onclick="insert_to_table(`/instructor/get-clinician/laboratory-logs/{{CLINICIAN-ID}}`, `cl-table-data`)" id="cl-laboratory-logs" autocomplete="off" checked>
+    <label class="btn rounded-0 border-bottom-0" for="cl-laboratory-logs">Laboratory Logs</label>
+
+    <input type="radio" class="btn-check" name="btnradio" onclick="insert_to_table(`/instructor/get-clinician/procedure-logs/{{CLINICIAN-ID}}`, `cl-table-data`)" id="cl-procedure-logs" autocomplete="off">
+    <label class="btn rounded-0 border-bottom-0" for="cl-procedure-logs">Procedure Logs</label>
+
+    <input type="radio" class="btn-check" name="btnradio" onclick="insert_to_table(`/instructor/get-clinician/patient-chart/{{CLINICIAN-ID}}`, `cl-table-data`)" id="cl-patient-chart" autocomplete="off">
+    <label class="btn rounded-0 border-bottom-0" for="cl-patient-chart">Patient Chart</label>
+
+    <input type="radio" class="btn-check" name="btnradio" onclick="insert_to_table(`/instructor/get-clinician/grades/{{CLINICIAN-ID}}`, `cl-table-data`)" id="cl-grades" autocomplete="off">
+    <label class="btn rounded-0 border-bottom-0" for="cl-grades">Grades</label>
+
+    <input type="radio" class="btn-check" name="btnradio" onclick="insert_to_table(`/instructor/get-clinician/tally-sheet/{{CLINICIAN-ID}}`, `cl-table-data`)" id="cl-tally-sheet" autocomplete="off">
+    <label class="btn rounded-0 border-bottom-0" for="cl-tally-sheet">Tally Sheet</label>
+
+    <input type="radio" class="btn-check" name="btnradio" onclick="insert_to_table(`/instructor/get-clinician/cor/{{CLINICIAN-ID}}`, `cl-table-data`)" id="cl-cor" autocomplete="off">
+    <label class="btn rounded-0 border-bottom-0" for="cl-cor">Cor</label>
+</div>
+<div class="border-top border-black border-1 mb-4"></div>
+<div class="col-md-10 m-5" id="cl-table-data">
+    {{TABLE-DATA}}
+</div>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style.css">
+    <title>Clinician</title>
+</head>
+<body>
+    <!-- LOGOUT MODAL -->
+    <div class="modal fade" id="logout_modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Logging Out</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Are you sure you want to logout?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" id="logout_confirm" class="btn btn-primary">Logout</button>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-- HEADER -->
+    <div class="col custom-background-color-blue px-5 mx-6 d-flex justify-content-between align-items-center w-100">
+        <div class="col d-flex justify-content-left align-items-center">
+            <img class="img-logo-small" src="/assets\img\sign_up\nu_logo.png" alt="Logo" class="logo-img">
+            <h3 class="display-7 text-light">DENTISTRY DEPARTMENT CLINICAL TRAINING</h3>
+        </div class="dropdown">
+            <a class="a" type="button" id="logout" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="\assets/icons/logout.svg">
+            </a>
+            <ul class="dropdown-menu w-25 mt-1" aria-labelledby="dropdownMenuButton">
+                <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#logout_modal">Logout</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="row empty-row bg-warning w-100"></div>
+    <div class="row empty-row px-3 w-100">
+        <!-- PROFILE DETAILS -->
+        <div class="col-md-3 border-end">
+            <!-- PROFILE SUMMARY -->
+            <div class="row p-5">
+                <div class="container-fluid border-bottom pb-5">
+                    <!-- IMG AND ENROLL STATUS -->
+                    <div class="row align-items-center">
+                        <div class="col flex-column d-flex justify-content-center align-items-center">
+                            <img src="/assets\img\sign_up\profile_placeholder.png" class="img">
+                            <h2 class="display-7 mt-3"><b>{{{clinician_name}}}</b></h1>
+                        </div>
+                    </div>
+                    <!-- ID NUMBER -->
+                    <div class="row d-flex justify-content-left mt-3 mb-2">
+                        <div class="col-md-1">
+                            <img src="\assets/icons/id_number.svg" alt="SVG Image">
+                        </div>
+                        <div class="col no-gutters">
+                            <p class="display-7  mb-0 mx-1 custom-color-green">ID Number</p>
+                            <p class="display-7 mb-0 mx-1">{{{id_number}}}</p>
+                        </div>
+                    </div>
+                     <!-- OFFICIAL EMAIL ADDRESS -->
+                    <div class="row d-flex justify-content-left mb-2">
+                        <div class="col-md-1">
+                            <img src="\assets/icons/mail.svg" alt="SVG Image">
+                        </div>
+                        <div class="col no-gutters">
+                            <p class="display-7  mb-0 mx-1 custom-color-green">Official Email Address</p>
+                            <p class="display-7 mb-0 mx-1">{{{email_address}}}</p>
+                        </div>
+                    </div>
+                    <!-- CLINIC CURRENTLY ENROLLED -->
+                    <div class="row d-flex justify-content-left">
+                        <div class="col-md-1">
+                            <img src="\assets/icons/bookmark.svg" alt="SVG Image">
+                        </div>
+                        <div class="col no-gutters">
+                            <p class="display-7  mb-0 mx-1 custom-color-green">Clinic Level Currently Enrolled</p>
+                            <p class="display-7 mb-0 mx-1">{{{clinic_level_enrolled}}}</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- NAV -->
+            <div class="row d-flex justify-content-center mx-2 px-3">
+                <div class="row mt-2">
+                    <button id="laboratory-logs" class="nav-btn btn btn-light d-flex justify-content-left active-button">
+                        <h5 class="text-info-emphasis display-7">Laboratory Logs</h5>
+                    </button>
+                </div>
+                <div class="row">
+                    <button id="procedure-logs" class="nav-btn btn btn-light d-flex justify-content-left">
+                        <h5 class="text text-info-emphasis display-7">Procedure Logs</h5>
+                    </button>
+                </div>
+                <div class="row">
+                    <button id="patient-chart" class="nav-btn btn btn-light d-flex justify-content-left">
+                        <h5 class="text-info-emphasis display-7">Patient Chart</h5>
+                    </button>
+                </div>
+                <div class="row">
+                    <button id="grades" class="nav-btn btn btn-light d-flex justify-content-left">
+                        <h5 class="text-info-emphasis display-7">Grades</h5>
+                    </button>
+                </div>
+                <div class="row">
+                    <button id="tally-sheets" class="nav-btn btn btn-light d-flex justify-content-left">
+                        <h5 class="text-info-emphasis display-7">Tally Sheets</h5>
+                    </button>
+                </div>
+                <div class="row mb-5">
+                    <button id="cor" class="nav-btn btn btn-light d-flex justify-content-left">
+                        <h5 class="text-info-emphasis display-7">COR</h5>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- TABLES -->
+        <div id="table-data" class="col-md-8 col-sm-6 m-5">
+            {{{render_laboratory_logs_clinician}}}
+        </div>
+    </div>
+
+    <script src="/clinician-scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+</body>
+</html>

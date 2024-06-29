@@ -1,0 +1,49 @@
+ <div class="row align-items-center">
+    <div class="col-auto ">
+        <button class="btn ms-0 rounded-0 border" id="back-to-lab-logs" type="submit">
+            <img src="\assets/icons/back.svg" alt="">
+        </button>
+    </div>
+    <div class="col">
+        <p3 class="display-6">Laboratory Logs > {{TYPE}} Laboratory Log</h1>
+    </div>
+</div>
+{{HEADER}}
+<div class="col-md-8 mt-3">
+    <form id="LaboratoryForm">
+        <div class="row mt-5">
+            <div class="col-md-6 mb-3 col-auto form-group">
+                <label for="date" class="form-label">Date <span class="text-danger">*</span></label>
+                <div class="col"><input type="date" class="form-control rounded-0" id="date" name="date" value="{{DATE}}" required></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="time-in" class="form-label">Time in  <span class="text-danger">*</span></label>
+                <div class="col"><input type="time" class="form-control rounded-0" id="time-in" name="time-in" placeholder="Enter time-in" value="{{TIME_IN}}" required></div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="time-out" class="form-label">Time out  <span class="text-danger">*</span></label>
+                <div class="col"><input type="time" class="form-control rounded-0" id="time-out" name="time-out" placeholder="Enter time-out" value="{{TIME_OUT}}" required></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col mb-3">
+                <label for="instructor-id" class="form-label">Instructor Name <span class="text-danger">*</span></label>
+                <select type="select" class="form-select rounded-0" id="instructor-id" name="instructor-id" required>
+                    {{OPTIONS}}
+                    <!-- Pre generated Instructors -->
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col mb-3">
+                <label for="remarks" class="form-label form-group">Remarks  <span class="text-danger">*</span></label>
+                <textarea type="text" class="form-control rounded-0 h-100" id="remarks" name="remarks" placeholder="your remarks... (max 255)" maxlength="255" required>{{REMARKS}}</textarea>
+            </div>
+        </div>
+        <div class="col mt-5">
+            <button id="{{BUTTON-TYPE}}" type="submit" name="{{REPORT-ID}}" class="btn btn-success">{{TYPE}} Laboratory Log</button>
+        </div>
+    </form>
+</div>
